@@ -42,14 +42,13 @@ class TextFileParserWorker {
     }
     
     func separateBooks(from parsedText: String) -> ([Book], String) {
+        let start = "*** "
+        let bookSeparator = "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
         
-        let start = "Contents"
-        let bookSeparator = "BOOK ONE"
-        
-        let bookComponents = parsedText.customSlice(start: start, end: bookSeparator)?
+        let bookComponents = parsedText.sliceFirst(from: start, to: bookSeparator)?
             .replacingOccurrences(of: "\r\n", with: "")
             .components(separatedBy: "    ")
-            .filter{!($0.contains("CHAPTER") || $0.contains("Contents"))}
+            .filter{$0.contains(":")}
         ?? []
         
         var books: [Book] = []
@@ -67,8 +66,8 @@ class TextFileParserWorker {
             books.append(book)
         }
         
-        let contentEndString = "*** START"
-        let content = substringUpToSpecificString(parsedText, contentEndString) ?? ""
+        //Will take substring upto first occurrence *** to show in description of book of any language
+        let content = substringUpToSpecificString(parsedText, start) ?? ""
         
         return (books, content)
     }

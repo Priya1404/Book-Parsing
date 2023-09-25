@@ -19,6 +19,22 @@ extension String {
         }
         return String(self[startIndex..<endIndex])
     }
+    
+    func sliceFirst(from startString: String, to endString: String) -> String? {
+            // Find the range of the start string
+            guard let startRange = self.range(of: startString) else {
+                return nil
+            }
+
+            // Find the range of the end string
+            guard let endRange = self.range(of: endString, range: startRange.upperBound..<self.endIndex) else {
+                return nil
+            }
+
+            // Extract the substring between start and end
+            let substringRange = startRange.upperBound..<endRange.lowerBound
+            return String(self[substringRange])
+        }
 
     /// Helper function to find the last index of a substring in a string
     func lastIndexOf(substring: String) -> String.Index? {

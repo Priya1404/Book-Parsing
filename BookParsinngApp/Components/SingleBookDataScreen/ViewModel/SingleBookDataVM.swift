@@ -21,11 +21,25 @@ class SingleBookDataVM {
     fileprivate var frequentSeven: (String, Int) = ("", 0)
     fileprivate var highestScoring: (String, Int) = ("", 0)
     
+    //MARK: Scrabble Scoring Data
+    
     // Define Scrabble letter values based on Scrabble letter distributions
     let letterValues: [Character: Int] = [
         "a": 1, "b": 3, "c": 3, "d": 2, "e": 1, "f": 4, "g": 2, "h": 4, "i": 1, "j": 8, "k": 5, "l": 1,
         "m": 3, "n": 1, "o": 1, "p": 3, "q": 10, "r": 1, "s": 1, "t": 1, "u": 1, "v": 4, "w": 4, "x": 8,
         "y": 4, "z": 10
+    ]
+    
+    let frenchLetterValues: [Character: Int] = [
+        "a": 1, "b": 3, "c": 3, "d": 2, "e": 1, "f": 4, "g": 2, "h": 4, "i": 1, "j": 8, "k": 5, "l": 1,
+        "m": 2, "n": 1, "o": 1, "p": 3, "q": 8, "r": 1, "s": 1, "t": 1, "u": 1, "v": 4, "w": 10, "x": 10,
+        "y": 10, "z": 10
+    ]
+    
+    let germanLetterValues: [Character: Int] = [
+        "a": 1, "b": 3, "c": 4, "d": 1, "e": 1, "f": 4, "g": 2, "h": 2, "i": 1, "j": 6, "k": 4, "l": 2,
+        "m": 3, "n": 1, "o": 2, "p": 4, "q": 10, "r": 1, "s": 1, "t": 1, "u": 1, "v": 6, "w": 3, "x": 8,
+        "y": 10, "z": 3, "ä": 6, "ü": 6, "ö": 8
     ]
     
     //MARK: Init
@@ -66,18 +80,31 @@ class SingleBookDataVM {
         ]
     }
     
-    fileprivate func calculateWordScore(_ word: String) -> Int {
+    ///Calculate word score based on language of the text, detected using Natural Language Processing
+    fileprivate func calculateWordScore(_ word: String, lang: LanguagesSupported) -> Int {
         let lowercasedWord = word.lowercased()
-        return lowercasedWord.reduce(0) { $0 + (letterValues[$1] ?? 0) }
+        
+        switch lang {
+        case .french:
+            return lowercasedWord.reduce(0) { $0 + (frenchLetterValues[$1] ?? 0) }
+        case .german:
+            return lowercasedWord.reduce(0) { $0 + (germanLetterValues[$1] ?? 0) }
+        default:
+            return lowercasedWord.reduce(0) { $0 + (letterValues[$1] ?? 0)}
+        }
+        
     }
     
     fileprivate func findHighestScoringWord(in text: String) -> (word: String, score: Int) {
         var highestScoringWord = ""
         var highestScore = 0
         
+        let language = detectedLanguage(for: text) ?? "english"
+        let lang = LanguagesSupported(rawValue: language) ?? .english
+        
         let words = text.lowercased().components(separatedBy: CharacterSet.whitespacesAndNewlines)
         for word in words {
-            let score = calculateWordScore(word)
+            let score = calculateWordScore(word, lang: lang)
             if score > highestScore {
                 highestScore = score
                 highestScoringWord = word

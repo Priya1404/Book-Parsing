@@ -19,7 +19,6 @@ class ProcessedBooksVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = processedBookVM?.getTitle()
-//        self.view.backgroundColor = UIColor.systemTeal
         descriptionLabel.text = processedBookVM?.getDescriptionText()
         setUpTableView()
     }

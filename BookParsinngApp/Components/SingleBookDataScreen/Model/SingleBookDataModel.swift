@@ -11,3 +11,9 @@ struct WordFrequency {
     var word: String
     var count: Int
 }
+
+enum LanguagesSupported: String {
+    case english
+    case french
+    case german
+}

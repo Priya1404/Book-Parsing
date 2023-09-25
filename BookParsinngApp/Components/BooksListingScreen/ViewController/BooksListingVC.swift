@@ -23,7 +23,6 @@ class BooksListingVC: UIViewController {
         title = booksListingVM.getAppTitle()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationController?.navigationBar.backgroundColor = UIColor.brown
-//        view.backgroundColor = UIColor.brown
         
         setUpTableView()
         setUpViews()
@@ -38,9 +37,8 @@ class BooksListingVC: UIViewController {
     }
     
     fileprivate func setUpViews() {
-
+        
         headingLabel.text = booksListingVM.getHeadingText()
-//        headingLabel.backgroundColor = UIColor.brown
         
         checkProcessedBooksButton.setTitle(booksListingVM.getPastButtonTitle(), for: .normal)
         checkProcessedBooksButton.titleLabel?.textAlignment = .center
@@ -78,7 +76,6 @@ class BooksListingVC: UIViewController {
             self.navigationController?.pushViewController(processedBooksVC, animated: true)
         }
     }
-    
 }
 
 //MARK: TableView Delegate Methods
@@ -90,8 +87,6 @@ extension BooksListingVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BookParsingConstants.CellIdentifierIDs.BooksListingCell, for: indexPath)
         cell.textLabel?.text = booksListingVM.getBookTitle(forIndex: indexPath.row)
-//        cell.textLabel?.backgroundColor = UIColor.brown
-//        cell.backgroundColor = UIColor.brown
         return cell
     }
     

@@ -31,6 +31,7 @@
 		DF6176742AC12F9C00B30DDA /* TextFileParserWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6176732AC12F9C00B30DDA /* TextFileParserWorker.swift */; };
 		DF6176762AC1345800B30DDA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6176752AC1345800B30DDA /* Constants.swift */; };
 		DF6176822AC1457A00B30DDA /* BookParsingWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6176812AC1457A00B30DDA /* BookParsingWorkerTests.swift */; };
+		DF6176892AC1561100B30DDA /* LanguageDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6176882AC1561100B30DDA /* LanguageDetector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		DF6176752AC1345800B30DDA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DF61767F2AC1457A00B30DDA /* BookParsinngAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookParsinngAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF6176812AC1457A00B30DDA /* BookParsingWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookParsingWorkerTests.swift; sourceTree = "<group>"; };
+		DF6176882AC1561100B30DDA /* LanguageDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDetector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 				DF61764A2ABE044A00B30DDA /* NetworkManager.swift */,
 				DF61766B2AC004EA00B30DDA /* UserDefaultsManager.swift */,
 				DF6176752AC1345800B30DDA /* Constants.swift */,
+				DF6176882AC1561100B30DDA /* LanguageDetector.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				DF61766C2AC004EA00B30DDA /* UserDefaultsManager.swift in Sources */,
 				DF6176322ABE004300B30DDA /* BooksListingVC.swift in Sources */,
 				DF61764D2ABE055000B30DDA /* BooksListingVM.swift in Sources */,
+				DF6176892AC1561100B30DDA /* LanguageDetector.swift in Sources */,
 				DF6176612ABECBD000B30DDA /* SingleBookDataVC.swift in Sources */,
 				DF6176662ABECC0300B30DDA /* SingleBookDataModel.swift in Sources */,
 				DF6176712AC12E6F00B30DDA /* UIView+Extensions.swift in Sources */,
