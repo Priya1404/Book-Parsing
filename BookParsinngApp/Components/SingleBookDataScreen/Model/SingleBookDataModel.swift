@@ -13,7 +13,7 @@ struct WordFrequency {
 }
 
 enum LanguagesSupported: String {
-    case english
-    case french
-    case german
+    case English
+    case French
+    case German
 }

@@ -85,9 +85,9 @@ class SingleBookDataVM {
         let lowercasedWord = word.lowercased()
         
         switch lang {
-        case .french:
+        case .French:
             return lowercasedWord.reduce(0) { $0 + (frenchLetterValues[$1] ?? 0) }
-        case .german:
+        case .German:
             return lowercasedWord.reduce(0) { $0 + (germanLetterValues[$1] ?? 0) }
         default:
             return lowercasedWord.reduce(0) { $0 + (letterValues[$1] ?? 0)}
@@ -99,8 +99,8 @@ class SingleBookDataVM {
         var highestScoringWord = ""
         var highestScore = 0
         
-        let language = detectedLanguage(for: text) ?? "english"
-        let lang = LanguagesSupported(rawValue: language) ?? .english
+        let language = detectedLanguage(for: text) ?? "English"
+        let lang = LanguagesSupported(rawValue: language) ?? .English
         
         let words = text.lowercased().components(separatedBy: CharacterSet.whitespacesAndNewlines)
         for word in words {

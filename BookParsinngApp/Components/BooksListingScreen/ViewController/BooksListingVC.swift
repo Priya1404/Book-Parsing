@@ -22,7 +22,7 @@ class BooksListingVC: UIViewController {
         super.viewDidLoad()
         title = booksListingVM.getAppTitle()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        navigationController?.navigationBar.backgroundColor = UIColor.brown
+        navigationController?.navigationBar.backgroundColor = UIColor.systemBrown
         
         setUpTableView()
         setUpViews()
@@ -33,7 +33,8 @@ class BooksListingVC: UIViewController {
     fileprivate func setUpTableView() {
         bookListingTableView.dataSource = self
         bookListingTableView.delegate = self
-        bookListingTableView.backgroundColor = UIColor.brown
+        bookListingTableView.layer.borderWidth = 2
+        bookListingTableView.layer.borderColor = UIColor.brown.cgColor
     }
     
     fileprivate func setUpViews() {
