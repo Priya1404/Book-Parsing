@@ -148,15 +148,15 @@ class SingleBookDataVM {
     }
     
     func getMostFrequentWordDetails() -> String {
-        return "Most frequent word is \(mostFrequent.0) with count \(mostFrequent.1)"
+        return "Most frequent word is: \"\(mostFrequent.0)\" with count: \(mostFrequent.1)"
     }
     
     func getMostFrequentSevenLetteredWordDetails() -> String {
-        return "Most frequent word is \(frequentSeven.0) with count \(frequentSeven.1)"
+        return "Most frequent 7-character word is: \"\(frequentSeven.0)\" with count: \(frequentSeven.1)"
     }
     
     func getHighestScoringWordDetails() -> String {
-        return "Most frequent word is \(highestScoring.0) with score \(highestScoring.1)"
+        return "Highest scoring word is: \"\(highestScoring.0)\" with score: \(highestScoring.1)"
     }
     
     func getBookInfoString() -> String {
@@ -166,3 +166,4 @@ class SingleBookDataVM {
         return bookInfo
     }
 }
+

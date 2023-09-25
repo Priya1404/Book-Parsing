@@ -39,10 +39,10 @@ extension ProcessedBooksVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: BookParsingConstants.CellIdentifierIDs.ProcessedBookCell, for: indexPath) as? ProcessedBookTableViewCell {
             let processedBookData = processedBookVM?.getProcessedBookData(at: indexPath.row) ?? ("", [""], [""], [""])
-            let dataModel = ProcessedBookModel(title: processedBookVM?.getBookTitleText(title: processedBookData.0) ?? "",
-                                               mostFrequent: processedBookVM?.getMostFrequentText(mostFrequent: processedBookData.1) ?? "",
-                                               frequentSeven: processedBookVM?.getFrequentSevenText(frequentSeven: processedBookData.2) ?? "",
-                                               highestScoring: processedBookVM?.getHighestScoringText(highestScoring: processedBookData.3) ?? "")
+            let dataModel = ProcessedBookModel(title: processedBookVM?.getBookTitleText(title: processedBookData.0) ?? NSAttributedString(),
+                                               mostFrequent: processedBookVM?.getMostFrequentText(mostFrequent: processedBookData.1) ?? NSAttributedString(),
+                                               frequentSeven: processedBookVM?.getFrequentSevenText(frequentSeven: processedBookData.2) ?? NSAttributedString(),
+                                               highestScoring: processedBookVM?.getHighestScoringText(highestScoring: processedBookData.3) ?? NSAttributedString())
             cell.setUpCellDetails(dataModel: dataModel)
             cell.layer.borderWidth = 5
             cell.layer.borderColor = UIColor.brown.cgColor

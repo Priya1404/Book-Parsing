@@ -8,12 +8,12 @@
 import Foundation
 
 class ProcessedBookModel {
-    var title: String?
-    var mostFrequent: String?
-    var frequentSeven: String?
-    var highestScoring: String?
+    var title: NSAttributedString?
+    var mostFrequent: NSAttributedString?
+    var frequentSeven: NSAttributedString?
+    var highestScoring: NSAttributedString?
     
-    init(title: String, mostFrequent: String, frequentSeven: String, highestScoring: String) {
+    init(title: NSAttributedString, mostFrequent: NSAttributedString, frequentSeven: NSAttributedString, highestScoring: NSAttributedString) {
         self.title = title
         self.mostFrequent = mostFrequent
         self.frequentSeven = frequentSeven

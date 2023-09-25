@@ -21,9 +21,9 @@ class ProcessedBookTableViewCell: UITableViewCell {
     }
     
     func setUpCellDetails(dataModel: ProcessedBookModel) {
-        bookTitleLabel.text = dataModel.title
-        mostFrequentLabel.text = dataModel.mostFrequent
-        frequentSevenLabel.text = dataModel.frequentSeven
-        highestScoringLabel.text = dataModel.highestScoring
+        bookTitleLabel.attributedText = dataModel.title
+        mostFrequentLabel.attributedText = dataModel.mostFrequent
+        frequentSevenLabel.attributedText = dataModel.frequentSeven
+        highestScoringLabel.attributedText = dataModel.highestScoring
     }
 }
