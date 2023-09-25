@@ -17,7 +17,9 @@ Here's the draw.io link, containing architecture design, initially thought mocku
 
 Few screenshots from the app: 
 
-![Simulator Screenshot - iPhone 14 Pro - 2023-09-25 at 13 17 40](https://github.com/Priya1404/Book-Parsing/assets/40390386/42bc4188-77ea-4dc2-9c5c-ad8767d7a195)
-![Simulator Screenshot - iPhone 14 Pro - 2023-09-25 at 13 17 37](https://github.com/Priya1404/Book-Parsing/assets/40390386/b48b1892-afeb-401f-91b7-2007cc453018)
-![Simulator Screenshot - iPhone 14 Pro - 2023-09-25 at 13 17 32](https://github.com/Priya1404/Book-Parsing/assets/40390386/5f674f20-fb4f-4fdf-8538-6d02969db484)
-![Simulator Screenshot - iPhone 14 Pro - 2023-09-25 at 13 17 28](https://github.com/Priya1404/Book-Parsing/assets/40390386/c337d0ac-41e5-453c-b00d-8dfab59995c4)
+
+![Simulator Screenshot - iPhone 14 Pro - 2023-09-25 at 13 48 08](https://github.com/Priya1404/Book-Parsing/assets/40390386/08f36e24-1c66-47de-b3db-08986a9af3e7)
+![Simulator Screenshot - iPhone 14 Pro - 2023-09-25 at 13 17 28](https://github.com/Priya1404/Book-Parsing/assets/40390386/483e5cb2-924c-47ac-a08d-780e9fff8af4)
+![Simulator Screenshot - iPhone 14 Pro - 2023-09-25 at 13 54 59](https://github.com/Priya1404/Book-Parsing/assets/40390386/8a817250-f52b-4975-934b-dd5dfc287f3d)
+![Simulator Screenshot - iPhone 14 Pro - 2023-09-25 at 14 21 17](https://github.com/Priya1404/Book-Parsing/assets/40390386/d0e1deed-558d-4d11-b6e5-dbb389ffcbb3)
+![Simulator Screenshot - iPhone 14 Pro - 2023-09-25 at 14 22 28](https://github.com/Priya1404/Book-Parsing/assets/40390386/62ea63d7-5fe3-4027-849f-f6c060ef1bb6)
